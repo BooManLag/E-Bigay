@@ -25,6 +25,13 @@ class NearMeState extends State<NearMe> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.yellow[700],
+        title: Text(
+          'Find Near Me',
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
       body: GoogleMap(
         mapType: MapType.hybrid,
         initialCameraPosition: _kGooglePlex,
@@ -33,9 +40,16 @@ class NearMeState extends State<NearMe> {
         },
       ),
       floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.yellow[700],
         onPressed: _goToTheLake,
-        label: Text('To the lake!'),
-        icon: Icon(Icons.directions_boat),
+        label: Text(
+          'Find Near Me',
+          style: TextStyle(color: Colors.black),
+        ),
+        icon: Icon(
+          Icons.directions_run,
+          color: Colors.black,
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:teamang_hackathon/explore_free_non.dart';
 import 'package:teamang_hackathon/profile.dart';
 
 import 'explore.dart';
