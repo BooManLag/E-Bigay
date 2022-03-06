@@ -18,89 +18,91 @@ class _ProfileState extends State<Profile> {
           backgroundColor: Colors.yellow[700],
           title: Text(
             'My Profile',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 50.0),
-                child: CircleAvatar(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                SizedBox(height: 20.0),
+                CircleAvatar(
                   radius: 50,
+                  backgroundColor: Colors.transparent,
+                  child: Image.asset('assets/images/02profile.png',
+                      fit: BoxFit.fitWidth),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Juan Dela Cruz',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Juan Dela Cruz',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
                 ),
-              ),
-              Text(
-                'Hi, I am an environmentalist. I love to recylcle different things',
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text(
-                  '5.0',
+                Text(
+                  'Hi, I am an environmentalist. I love to recylcle different things',
                   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                    size: 25,
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '5.0',
+                    style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10),
                   ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                    size: 25,
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 60,
-                  width: 350,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 25,
                     ),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Text(
-                          'Friends',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 25,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 25,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 25,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                      size: 25,
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
+                  child: Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 100.0),
-                        child: FlatButton(
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text(
+                            'Friends',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        FlatButton(
                           onPressed: () {},
                           child: Container(
                             width: 140,
@@ -126,85 +128,92 @@ class _ProfileState extends State<Profile> {
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Container(
-                      height: 120,
-                      width: 170,
-                      decoration: BoxDecoration(
-                        color: Colors.blue[900],
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Container(
+                        height: 120,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.50 - 30,
+                        decoration: BoxDecoration(
+                          color: Colors.blue[900],
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '16',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 50,
+                                  color: Colors.white),
+                            ),
+                            Text(
+                              'Shared foods and non-foods',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w200,
+                                  fontSize: 10,
+                                  color: Colors.white),
+                            ),
+                          ],
                         ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '16',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 50,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            'Shared foods and non-foods',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w200,
-                                fontSize: 10,
-                                color: Colors.white),
-                          ),
-                        ],
-                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Container(
-                      height: 120,
-                      width: 170,
-                      decoration: BoxDecoration(
-                        color: Colors.blue[900],
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Container(
+                        height: 120,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.50 - 30,
+                        decoration: BoxDecoration(
+                          color: Colors.blue[900],
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '20',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 50,
+                                  color: Colors.white),
+                            ),
+                            Text(
+                              'Claimed foods and non-foods',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w200,
+                                  fontSize: 10,
+                                  color: Colors.white),
+                            ),
+                          ],
                         ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '20',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 50,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            'Claimed foods and non-foods',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w200,
-                                fontSize: 10,
-                                color: Colors.white),
-                          ),
-                        ],
-                      ),
                     ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  height: 120,
-                  width: 350,
+                  ],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(15.0),
+                  margin: const EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.all(
@@ -213,33 +222,31 @@ class _ProfileState extends State<Profile> {
                   ),
                   child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Achievements',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 180.0),
-                              child: Text(
-                                'View All',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 10,
-                                    color: Colors.grey),
-                              ),
-                            ),
-                          ],
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Achievements',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'View All',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                                color: Colors.grey),
+                          ),
+                        ],
                       ),
+                      SizedBox(height: 10.0),
                       Row(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 10.0),
                             child: CircleAvatar(
-                              radius: 10,
+                              radius: 16,
+                              backgroundColor: Colors.transparent,
+                              child: Image.asset('assets/images/5Badge.png'),
                             ),
                           ),
                           Padding(
@@ -259,7 +266,9 @@ class _ProfileState extends State<Profile> {
                             Padding(
                               padding: const EdgeInsets.only(left: 10.0),
                               child: CircleAvatar(
-                                radius: 10,
+                                radius: 16,
+                                backgroundColor: Colors.transparent,
+                                child: Image.asset('assets/images/2Badge.png'),
                               ),
                             ),
                             Padding(
@@ -276,8 +285,8 @@ class _ProfileState extends State<Profile> {
                     ],
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
