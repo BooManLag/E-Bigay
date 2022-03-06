@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
+import 'package:teamang_hackathon/botnavbar.dart';
 import 'package:teamang_hackathon/home.dart';
 
 class Login extends StatelessWidget {
@@ -12,7 +13,7 @@ class Login extends StatelessWidget {
       onSignup: (_) => Future(() => null),
       onSubmitAnimationCompleted: () {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => HomePageFinal(),
+          builder: (context) => BotNavBar(),
         ));
       },
       onRecoverPassword: (_) => Future(() => null),
@@ -27,7 +28,7 @@ class Login extends StatelessWidget {
         goBackButton: 'GO BACK',
         confirmPasswordError: 'Not match!',
         recoverPasswordDescription:
-            'Type your email to a receive a recovery link',
+            'Type your email to a receive a recovery linkx',
         recoverPasswordSuccess: 'Password rescued successfully',
       ),
     );
