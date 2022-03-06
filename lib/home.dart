@@ -22,47 +22,75 @@ class _HomePageFinalState extends State<HomePageFinal> {
           appBar: AppBar(
             backgroundColor: Colors.white,
             elevation: 0,
-            leading: CircleAvatar(
-              backgroundColor: Colors.black,
-              radius: 40,
+            leading: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: CircleAvatar(
+                backgroundColor: Colors.black,
+                radius: 40,
+              ),
             ),
             title: Text(
-              'Welcome Back!',
+              'Welcome Back, Juan!',
               style: TextStyle(color: Colors.black),
             ),
           ),
-          body: Column(
-            children: [
-              UpperData(),
-              Container(
-                width: 350,
-                height: 250,
-                child: Card(
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                UpperData(),
+                Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),
                   ),
-                  color: Colors.white,
+                  margin: EdgeInsets.fromLTRB(20.0, 10, 20, 10),
                   elevation: 10,
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 40,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                                'https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg'),
-                          ),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                  child: Container(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          // Image border
+                          child: SizedBox.fromSize(
+                            size: Size(MediaQuery.of(context).size.width,
+                                80), // Image radius
+                            child: Image.network(
+                                'https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg',
+                                fit: BoxFit.cover),
                           ),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 8.0, 0, 0),
+                          child: Text(
+                            'Share your food',
+                            style: TextStyle(
+                                fontSize: 16.0, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Donate every month and match with families that need your help. You can make a difference.',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            primary: Colors.white,
+                            minimumSize: Size(120, 40),
+                            backgroundColor: Colors.blue[900],
+                            onSurface: Colors.grey,
+                          ),
+                          onPressed: () {},
+                          child: Text('Donate Now'),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              )
-            ],
+              ],
+            ),
           )),
     );
   }

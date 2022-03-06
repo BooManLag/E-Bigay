@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class UpperData extends StatefulWidget {
@@ -10,181 +11,178 @@ class UpperData extends StatefulWidget {
 class _UpperDataState extends State<UpperData> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Center(
-            child: Container(
-              width: 350,
-              height: 250,
-              padding: new EdgeInsets.all(10.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0),
-                ),
-                color: Colors.white,
-                elevation: 10,
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/4.png'),
-                      fit: BoxFit.fitWidth,
+    return Center(
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25.0),
+        ),
+        margin: EdgeInsets.fromLTRB(20.0, 10, 20, 10),
+        elevation: 10,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            gradient: LinearGradient(
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter,
+                colors: [
+                  Colors.black.withOpacity(0.5),
+                  Colors.black.withOpacity(1.0),
+                ],
+                stops: [
+                  0.0,
+                  1.0
+                ]),
+            image: DecorationImage(
+              opacity: 0.3,
+              fit: BoxFit.cover,
+              image: AssetImage('assets/images/5shirt.png'),
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Near You',
+                      style: TextStyle(
+                          fontSize: 15.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                     ),
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              'Near You',
-                              style: TextStyle(
-                                  fontSize: 15.0,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 150.0),
-                            child: OutlinedButton(
-                              style: OutlinedButton.styleFrom(
-                                side:
-                                    BorderSide(color: Colors.yellow, width: 2),
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                'View All',
-                                style: TextStyle(
-                                    fontSize: 10, color: Colors.yellow),
-                              ),
-                            ),
-                          ),
-                        ],
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        side: BorderSide(color: Colors.yellow, width: 2),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(right: 260.0, top: 30),
-                        child: Text(
-                          'Pizza',
-                          style: TextStyle(
+                      onPressed: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(fontSize: 10, color: Colors.yellow),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Text(
+                  'White T-Shirts',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 14,
+                      backgroundColor: Colors.transparent,
+                      child: Image.asset('assets/images/01profile.png'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Juan Dela Cruz',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        '5.0',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.pin_drop,
+                      color: Colors.white,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '2 km away',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Container(
+                        height: 25,
+                        width: 55,
+                        decoration: BoxDecoration(
                             color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        child: Center(
+                          child: Text(
+                            'Food',
+                            style: TextStyle(color: Colors.black),
                           ),
                         ),
                       ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: CircleAvatar(
-                              radius: 10,
-                            ),
-                          ),
-                          Text(
-                            'Juan Dela Cruz',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15.0),
-                            child: Text(
-                              '5.0',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.pin_drop,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(
-                            '2 km away',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15.0),
-                            child: Container(
-                              height: 25,
-                              width: 55,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
-                              child: Center(
-                                child: Text(
-                                  'Food',
-                                  style: TextStyle(color: Colors.black),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              'Im currently near your location',
-                              style: TextStyle(
-                                fontSize: 10,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 70.0),
-                            child: TextButton(
-                              style: TextButton.styleFrom(
-                                primary: Colors.white,
-                                backgroundColor: Colors.blue[900],
-                                onSurface: Colors.grey,
-                              ),
-                              onPressed: () {},
-                              child: Text('Message'),
-                            ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'I’m giving away my extra white shirts. \nThe size is small for me.',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.white,
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Colors.white,
+                        minimumSize: Size(120, 40),
+                        backgroundColor: Colors.blue[900],
+                        onSurface: Colors.grey,
+                      ),
+                      onPressed: () {},
+                      child: Text('Message'),
+                    )
+                  ],
+                )
+              ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }
