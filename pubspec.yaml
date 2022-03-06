@@ -18,6 +18,8 @@ dependencies:
   animated_login: ^1.5.1
   flutter_login: ^3.1.0
   curved_navigation_bar: ^1.0.3
+  maps_launcher: ^2.0.1
+  google_maps_flutter: ^2.1.2
 
 dev_dependencies:
   flutter_test:
