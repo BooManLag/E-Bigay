@@ -9,9 +9,9 @@ E-BIGAY is an application that helps Filipinos in reducing solid waste through r
 Just type any string then follow it up with '@gmail.com'
 
 ## Members of TeaMang
-Ma. Jesusa R. Negrito
-Kaye Nicole C. Catindig
-Benison B. Fernando
-Mher John F Tan
-Joshua Bumanlag
+#### Ma. Jesusa R. Negrito
+#### Kaye Nicole C. Catindig
+#### Benison B. Fernando
+#### Mher John F Tan
+#### Joshua Bumanlag
 
