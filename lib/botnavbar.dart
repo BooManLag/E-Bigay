@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:teamang_hackathon/convo.dart';
 import 'package:teamang_hackathon/explore_free_non.dart';
+import 'package:teamang_hackathon/messages.dart';
 import 'package:teamang_hackathon/profile.dart';
+import 'package:teamang_hackathon/share.dart';
 
 import 'explore.dart';
 import 'home.dart';
@@ -20,6 +23,7 @@ class _BotNavBarState extends State<BotNavBar> {
     NearMe(),
     Explore(),
     Profile(),
+    Messages(),
   ];
   int _page = 0;
 
@@ -40,6 +44,7 @@ class _BotNavBarState extends State<BotNavBar> {
             Icon(Icons.pin_drop, size: 30),
             Icon(Icons.find_in_page, size: 30),
             Icon(Icons.perm_identity, size: 30),
+            Icon(Icons.message, size: 30),
           ],
           color: Colors.white,
           buttonBackgroundColor: Colors.white,

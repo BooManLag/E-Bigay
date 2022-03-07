@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teamang_hackathon/reqfood.dart';
+import 'package:teamang_hackathon/request.dart';
 import 'explore.dart';
 import 'explore_free_non.dart';
 
@@ -17,10 +18,23 @@ class _ExploreReqNonState extends State<ExploreReqNon> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
           backgroundColor: Colors.yellow[700],
-          title: Text(
-            'Explore',
-            style: TextStyle(color: Colors.black),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Text(
+              'Explore',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         body: SingleChildScrollView(
@@ -91,7 +105,7 @@ class _ExploreReqNonState extends State<ExploreReqNon> {
                       );
                     },
                     child: Container(
-                      width: 80,
+                      width: 100,
                       height: 30,
                       decoration: BoxDecoration(
                         color: Colors.grey,
@@ -129,7 +143,7 @@ class _ExploreReqNonState extends State<ExploreReqNon> {
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                        'https://www.curiouscuisiniere.com/wp-content/uploads/2018/05/Filipino-Garlic-Fried-Rice-SinangagDSC05650-450.jpg'),
+                                        'https://www.attune.com.au/wp-content/uploads/2021/08/hearing-aids.jpg'),
                                   ),
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(30),
@@ -142,7 +156,7 @@ class _ExploreReqNonState extends State<ExploreReqNon> {
                                 Padding(
                                   padding: const EdgeInsets.only(right: 100.0),
                                   child: Text(
-                                    'Sinangag',
+                                    'Hearing aid',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -228,6 +242,18 @@ class _ExploreReqNonState extends State<ExploreReqNon> {
                       ],
                     ),
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 250.0),
+                child: FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Request()),
+                    );
+                  },
+                  child: Icon(Icons.add),
                 ),
               ),
             ],

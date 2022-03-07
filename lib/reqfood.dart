@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teamang_hackathon/reqnonfood.dart';
+import 'package:teamang_hackathon/request.dart';
 import 'explore.dart';
 import 'explore_free_non.dart';
 
@@ -17,10 +18,23 @@ class _ExploreReqFoodState extends State<ExploreReqFood> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
           backgroundColor: Colors.yellow[700],
-          title: Text(
-            'Explore',
-            style: TextStyle(color: Colors.black),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Text(
+              'Explore',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         body: SingleChildScrollView(
@@ -91,7 +105,7 @@ class _ExploreReqFoodState extends State<ExploreReqFood> {
                       );
                     },
                     child: Container(
-                      width: 80,
+                      width: 100,
                       height: 30,
                       decoration: BoxDecoration(
                         color: Colors.grey,
@@ -352,6 +366,18 @@ class _ExploreReqFoodState extends State<ExploreReqFood> {
                       ],
                     ),
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 250.0),
+                child: FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Request()),
+                    );
+                  },
+                  child: Icon(Icons.add),
                 ),
               ),
             ],

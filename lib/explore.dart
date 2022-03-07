@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teamang_hackathon/botnavbar.dart';
 import 'package:teamang_hackathon/explore_free_non.dart';
 import 'package:teamang_hackathon/reqfood.dart';
+import 'package:teamang_hackathon/share.dart';
 
 class Explore extends StatefulWidget {
   const Explore({Key? key}) : super(key: key);
@@ -17,10 +19,26 @@ class _ExploreState extends State<Explore> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) => BotNavBar()),
+              );
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
           backgroundColor: Colors.yellow[700],
-          title: Text(
-            'Explore',
-            style: TextStyle(color: Colors.black),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Text(
+              'Explore',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         body: SingleChildScrollView(
@@ -29,7 +47,7 @@ class _ExploreState extends State<Explore> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(
@@ -90,7 +108,7 @@ class _ExploreState extends State<Explore> {
                       );
                     },
                     child: Container(
-                      width: 80,
+                      width: 100,
                       height: 30,
                       decoration: BoxDecoration(
                         color: Colors.grey,
@@ -472,128 +490,16 @@ class _ExploreState extends State<Explore> {
                   ),
                 ),
               ),
-              Container(
-                width: 350,
-                height: 150,
-                padding: new EdgeInsets.all(10.0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                  color: Colors.white,
-                  elevation: 10,
-                  child: Container(
-                    child: Column(
-                      children: <Widget>[
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                width: 100,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                        'https://i0.wp.com/www.tagaloglang.com/ux/wp-content/uploads/2018/10/coffee-cup-kutsara-tasa-ng-kape.jpg?fit=639%2C524&ssl=1'),
-                                  ),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(30),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 120.0),
-                                  child: Text(
-                                    'Kape',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: CircleAvatar(
-                                        radius: 10,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Mher John Tan',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 10,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 8.0),
-                                      child: Text(
-                                        '5.0',
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 10),
-                                      ),
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.yellow,
-                                      size: 10,
-                                    ),
-                                  ],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 100.0),
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 5.0),
-                                        child: Icon(
-                                          Icons.pin_drop,
-                                          color: Colors.grey,
-                                          size: 15,
-                                        ),
-                                      ),
-                                      Text(
-                                        '4 km away',
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 10),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+              Padding(
+                padding: const EdgeInsets.only(left: 250.0),
+                child: FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Share()),
+                    );
+                  },
+                  child: Icon(Icons.add),
                 ),
               ),
             ],

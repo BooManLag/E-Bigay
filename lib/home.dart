@@ -84,7 +84,7 @@ class _HomePageFinalState extends State<HomePageFinal> {
                           ),
                           onPressed: () {},
                           child: Text('Donate Now'),
-                        )
+                        ),
                       ],
                     ),
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teamang_hackathon/messages.dart';
 
 class UpperData extends StatefulWidget {
   const UpperData({Key? key}) : super(key: key);
@@ -174,7 +175,12 @@ class _UpperDataState extends State<UpperData> {
                         backgroundColor: Colors.blue[900],
                         onSurface: Colors.grey,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Messages()),
+                        );
+                      },
                       child: Text('Message'),
                     )
                   ],
