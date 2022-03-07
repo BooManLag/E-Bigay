@@ -67,21 +67,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         PageViewModel(
           title: "Share what you have",
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
+              "Thinking about giving away things? Connect with people in need.",
           image: _buildImage('1.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "You can help in reducing food waste",
           body:
-              "Download the Stockpile app and master the market with our mini-lesson.",
+              "By sharing you just helped reducing gas emissions and stockpiling of waste",
           image: _buildImage('2.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Give and Take",
           body:
-              "Kids and teens can track their stocks 24/7 and place trades that you approve.",
+              "Not only you can give what you have but also ask for what you need",
           image: _buildImage('3.png'),
           decoration: pageDecoration,
         ),
