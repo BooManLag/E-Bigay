@@ -23,7 +23,7 @@ class _BotNavBarState extends State<BotNavBar> {
     NearMe(),
     Explore(),
     Profile(),
-    Messages(),
+    ChatPage(),
   ];
   int _page = 0;
 
