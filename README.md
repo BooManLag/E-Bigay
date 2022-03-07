@@ -1,6 +1,7 @@
-# TeaMang Hackathon
+## TeaMang Hackathon
+# E-Bigay
 
-A new Flutter application.
+E-BIGAY is an application that helps Filipinos in reducing solid waste through repurposing and sharing things that people tend to throw away, even though they still have value. We do this by promoting sustainable consumption and production through sharing food and giving away their things rather than disposing of it
 
 ## Getting Started
 
